@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_site=globalThis.webpackChunkdocs_site||[]).push([[8947],{6600:t=>{t.exports=JSON.parse('{"authors":[{"name":"Marvin Zhang","title":"LeanSpec Author","url":"https://github.com/tikazyq","imageURL":"https://github.com/tikazyq.png","key":"marvin","page":null,"count":4}]}')}}]);
