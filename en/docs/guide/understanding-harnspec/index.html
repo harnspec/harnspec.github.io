@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Understanding HarnSpec | HarnSpec</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://harnspec.github.io/en/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://harnspec.github.io/en/img/social-card.png"><meta data-rh="true" property="og:url" content="https://harnspec.github.io/en/docs/guide/understanding-harnspec"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Understanding HarnSpec | HarnSpec"><meta data-rh="true" name="description" content="HarnSpec is designed so both humans and AI agents can hold the full context for a piece of work. This page explains why the structure matters, how each concept connects, and how to evolve specs as complexity grows."><meta data-rh="true" property="og:description" content="HarnSpec is designed so both humans and AI agents can hold the full context for a piece of work. This page explains why the structure matters, how each concept connects, and how to evolve specs as complexity grows."><link data-rh="true" rel="icon" href="/en/favicon.ico"><link data-rh="true" rel="canonical" href="https://harnspec.github.io/en/docs/guide/understanding-harnspec"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/understanding-harnspec" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/en/docs/guide/understanding-harnspec" hreflang="en"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/understanding-harnspec" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Understanding HarnSpec","item":"https://harnspec.github.io/en/docs/guide/understanding-harnspec"}]}</script><link rel="stylesheet" href="/en/assets/css/styles.6f18fabc.css">
-<script src="/en/assets/js/runtime~main.ddb78aec.js" defer="defer"></script>
-<script src="/en/assets/js/main.20101eb4.js" defer="defer"></script>
+<script src="/en/assets/js/runtime~main.2c00c1a2.js" defer="defer"></script>
+<script src="/en/assets/js/main.7b7081ec.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -49,7 +49,7 @@
 <li class="">Update status as soon as implementation starts or stops—status tracks the work, not the writing.</li>
 <li class="">Capture discoveries under <code>## Notes</code> or <code>## Evolution</code> so newcomers see how reality changed.</li>
 <li class="">Re-run <code>harnspec validate</code> and <code>harnspec tokens &lt;spec&gt;</code> before shipping to catch missing metadata or oversize files.</li>
-<li class="">Refresh links to dashboards, branches, and MCP commands so automation stays trustworthy.</li>
+<li class="">Refresh links to dashboards, branches, and CLI commands so automation stays trustworthy.</li>
 </ul>
 <p>Use this quick health check before every review:</p>
 <ul>
@@ -61,7 +61,7 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_qTje" id="working-with-ai-agents">Working with AI Agents<a href="#working-with-ai-agents" class="hash-link" aria-label="Direct link to Working with AI Agents" title="Direct link to Working with AI Agents" translate="no">​</a></h2>
 <ol>
-<li class="">Share the spec path or rely on MCP search so the agent can pull the right context files.</li>
+<li class="">Share the spec path or rely on Agent Skills search so the agent can pull the right context files.</li>
 <li class="">Ask the agent to summarize the spec back—alignment check before code changes.</li>
 <li class="">Let the agent draft code, docs, or tests, then document deviations in the spec so the next agent stays grounded.</li>
 <li class="">Close the loop by verifying the Validation section and updating status to <code>complete</code>.</li>

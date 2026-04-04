@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">CLI 概览 | HarnSpec</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://harnspec.github.io/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://harnspec.github.io/img/social-card.png"><meta data-rh="true" property="og:url" content="https://harnspec.github.io/docs/guide/usage/cli/overview"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="CLI 概览 | HarnSpec"><meta data-rh="true" name="description" content="HarnSpec CLI 提供了管理项目Spec的完整工具集。无论您是直接工作的开发者还是自动化工作流的 AI 代理,CLI 都为Spec生命周期的每个阶段提供高效的命令。"><meta data-rh="true" property="og:description" content="HarnSpec CLI 提供了管理项目Spec的完整工具集。无论您是直接工作的开发者还是自动化工作流的 AI 代理,CLI 都为Spec生命周期的每个阶段提供高效的命令。"><link data-rh="true" rel="icon" href="/favicon.ico"><link data-rh="true" rel="canonical" href="https://harnspec.github.io/docs/guide/usage/cli/overview"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/usage/cli/overview" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/en/docs/guide/usage/cli/overview" hreflang="en"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/usage/cli/overview" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CLI 概览","item":"https://harnspec.github.io/docs/guide/usage/cli/overview"}]}</script><link rel="stylesheet" href="/assets/css/styles.6db8ba4f.css">
-<script src="/assets/js/runtime~main.53a25b06.js" defer="defer"></script>
-<script src="/assets/js/main.0824275d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1133ded2.js" defer="defer"></script>
+<script src="/assets/js/main.4d283ff8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -33,7 +33,7 @@
 </ul>
 <p>AI 代理可以直接使用 HarnSpec CLI 命令作为工具:</p>
 <div class="language-bash codeBlockContainer_GXYu theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent__NUS"><pre tabindex="0" class="prism-code language-bash codeBlock_uUZq thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_qu9X"><span class="token-line" style="color:#393A34"><span class="token plain"># 代理搜索相关上下文</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">harnspec search &quot;authentication decision&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 代理检索特定Spec</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">harnspec view 042</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 代理检查依赖关系</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">harnspec deps 042</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 代理在实现后更新状态</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">harnspec update 042 --status complete</span><br></span></code></pre></div></div>
-<p><strong>MCP 服务器集成</strong>: 为实现无缝的 AI 代理访问,HarnSpec 提供 <a class="" href="/docs/reference/cli">MCP (Model Context Protocol) 服务器</a>,将 CLI 功能作为结构化工具公开。</p>
+<p><strong>Agent Skills 集成</strong>: 为实现无缝的 AI 代理访问,HarnSpec 提供 Agent Skills,将 CLI 功能作为结构化工具公开。</p>
 <h2 class="anchor anchorTargetStickyNavbar_qTje" id="命令类别">命令类别<a href="#命令类别" class="hash-link" aria-label="命令类别的直接链接" title="命令类别的直接链接" translate="no">​</a></h2>
 <p>CLI 将命令组织成逻辑组:</p>
 <h3 class="anchor anchorTargetStickyNavbar_qTje" id="创建和管理">创建和管理<a href="#创建和管理" class="hash-link" aria-label="创建和管理的直接链接" title="创建和管理的直接链接" translate="no">​</a></h3>
@@ -92,7 +92,7 @@
 <h3 class="anchor anchorTargetStickyNavbar_qTje" id="ai-工具">AI 工具<a href="#ai-工具" class="hash-link" aria-label="AI 工具的直接链接" title="AI 工具的直接链接" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>直接 CLI 访问</strong> - 代理可以调用命令</li>
-<li class=""><strong>MCP 服务器</strong> - 结构化工具接口</li>
+<li class=""><strong>Agent Skills</strong> - 结构化工具接口</li>
 <li class=""><strong>搜索集成</strong> - 跨会话的语义记忆</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_qTje" id="最佳实践">最佳实践<a href="#最佳实践" class="hash-link" aria-label="最佳实践的直接链接" title="最佳实践的直接链接" translate="no">​</a></h2>
