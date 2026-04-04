@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-guide/understanding" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">理解 HarnSpec | HarnSpec</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://harnspec.github.io/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://harnspec.github.io/img/social-card.png"><meta data-rh="true" property="og:url" content="https://harnspec.github.io/docs/guide/understanding"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="理解 HarnSpec | HarnSpec"><meta data-rh="true" name="description" content="&quot;最好的Spec是被阅读、理解和执行的Spec——无论是人类还是 AI。&quot;"><meta data-rh="true" property="og:description" content="&quot;最好的Spec是被阅读、理解和执行的Spec——无论是人类还是 AI。&quot;"><link data-rh="true" rel="icon" href="/favicon.ico"><link data-rh="true" rel="canonical" href="https://harnspec.github.io/docs/guide/understanding"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/understanding" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/en/docs/guide/understanding" hreflang="en"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/understanding" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.6db8ba4f.css">
+<script src="/assets/js/runtime~main.53a25b06.js" defer="defer"></script>
+<script src="/assets/js/main.0824275d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo-with-bg.svg"><link rel="preload" as="image" href="/img/logo-dark-bg.svg"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_qiAP" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav aria-label="主导航" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo-with-bg.svg" alt="HarnSpec Logo" class="themedComponent_ixbW themedComponent--light_aP_u"><img src="/img/logo-dark-bg.svg" alt="HarnSpec Logo" class="themedComponent_ixbW themedComponent--dark_w3Ne"></div><b class="navbar__title text--truncate">HarnSpec</b></a><a class="navbar__item navbar__link" href="/docs/guide/">指南</a><a class="navbar__item navbar__link" href="/docs/reference/cli">参考</a><a href="https://harnspec.github.io/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Web 应用<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_bXcV"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>简体中文</a><ul class="dropdown__menu"><li><a href="/docs/guide/understanding" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh-Hans">简体中文</a></li><li><a href="/en/docs/guide/understanding" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/harnspec/harnspec" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_aZw2 colorModeToggle_riY9"><button class="clean-btn toggleButton_ilLi toggleButtonDisabled_yyPz" type="button" disabled="" title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI lightToggleIcon_uCwf"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI darkToggleIcon_MHYg"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI systemToggleIcon_PQ0a"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_zOLK"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_mFoK"><div class="docsWrapper_i8Gt"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_X4Pl" type="button"></button><div class="docRoot_iKl8"><main class="docMainContainer_vSnV docMainContainerEnhanced_lSJs"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_BUnp"><div class="docItemContainer_vxDl"><article><div class="tocCollapsible_iK11 theme-doc-toc-mobile tocMobile_czu2"><button type="button" class="clean-btn tocCollapsibleButton_rCZN">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>理解 HarnSpec</h1></header>
+<blockquote>
+<p>&quot;最好的Spec是被阅读、理解和执行的Spec——无论是人类还是 AI。&quot;</p>
+</blockquote>
+<p>HarnSpec 是一种 <strong>思维方式和方法论</strong>，用于编写在 AI 驱动的开发中实际使用的Spec。它建立在不可变的约束（物理、生物、经济）之上，旨在弥合人类意图与机器执行之间的差距。</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="什么是-harnspec">什么是 HarnSpec？<a href="#什么是-harnspec" class="hash-link" aria-label="什么是 HarnSpec？的直接链接" title="什么是 HarnSpec？的直接链接" translate="no">​</a></h2>
+<p>HarnSpec 是：</p>
+<ul>
+<li class=""><strong>基于约束的方法论</strong>，用于编写适合工作记忆 (Working Memory)的Spec</li>
+<li class=""><strong>桥梁</strong>，连接人类意图和 AI 代理执行</li>
+<li class=""><strong>上下文工程实践</strong>，用于管理 AI 工作记忆</li>
+<li class=""><strong>持久记忆层</strong>，为 AI 代理跨会话提供持久化</li>
+<li class=""><strong>敏捷方法</strong>：从小处开始，迭代，专注于结果</li>
+</ul>
+<p>HarnSpec 提供：</p>
+<ul>
+<li class="">用于创建和管理Spec的 CLI 工具</li>
+<li class="">用于项目管理的结构化frontmatter（状态、标签、依赖关系）</li>
+<li class="">MCP 服务器集成，供 AI 代理访问</li>
+<li class="">用于管理复杂性的子 Spec文件</li>
+<li class="">验证和项目健康跟踪</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="harnspec-解决的问题">HarnSpec 解决的问题<a href="#harnspec-解决的问题" class="hash-link" aria-label="HarnSpec 解决的问题的直接链接" title="HarnSpec 解决的问题的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="传统spec失败">传统Spec失败<a href="#传统spec失败" class="hash-link" aria-label="传统Spec失败的直接链接" title="传统Spec失败的直接链接" translate="no">​</a></h3>
+<p>传统Spec由于可预测的原因而失败：</p>
+<ul>
+<li class=""><strong>太长</strong> → 没人读（违反工作记忆限制）</li>
+<li class=""><strong>太详细</strong> → 很快就过时（维护负担）</li>
+<li class=""><strong>太僵化</strong> → 无法随着理解的增长而适应（过早的结构）</li>
+<li class=""><strong>太正式</strong> → 阻碍协作（摩擦超过价值）</li>
+</ul>
+<p>这些不是流程失败——它们是 <strong>约束违规</strong>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="ai-驱动开发的差距">AI 驱动开发的差距<a href="#ai-驱动开发的差距" class="hash-link" aria-label="AI 驱动开发的差距的直接链接" title="AI 驱动开发的差距的直接链接" translate="no">​</a></h3>
+<p>在 AI 辅助开发中，出现了一个新挑战：</p>
+<ul>
+<li class=""><strong>人类以目标和上下文思考</strong>（&quot;使仪表板变快&quot;）</li>
+<li class=""><strong>AI 需要清晰、明确的指令</strong>（&quot;使用 Redis 缓存，p95 &lt;100ms&quot;）</li>
+<li class=""><strong>必须弥合差距 (Bridge the Gap)</strong>，否则 AI 会产生幻觉、误解或反复询问</li>
+</ul>
+<p><strong>传统文档无法弥合这一差距</strong>，因为它要么：</p>
+<ul>
+<li class="">对 AI 执行来说太模糊（高层战略文档）</li>
+<li class="">对人类阅读来说太详细（全面的 API 参考）</li>
+<li class="">没有为 AI 检索结构化（没有示例/标准的散文）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="为什么现有解决方案不足">为什么现有解决方案不足<a href="#为什么现有解决方案不足" class="hash-link" aria-label="为什么现有解决方案不足的直接链接" title="为什么现有解决方案不足的直接链接" translate="no">​</a></h3>
+<p><strong>为什么不只使用任务单/问题？</strong></p>
+<ul>
+<li class="">对复杂功能来说太简短（没有理由、约束或权衡）</li>
+<li class="">对 AI 代理没有持久记忆（每个会话都重新开始）</li>
+<li class="">难以在多个问题之间维护上下文</li>
+</ul>
+<p><strong>为什么不使用全面的文档？</strong></p>
+<ul>
+<li class="">太长而无法适应 AI 上下文窗口（常见 &gt;10k 行）</li>
+<li class="">太正式和详尽（违反信噪比 (Signal-to-Noise)）</li>
+<li class="">维护负担随规模扩展（变得过时）</li>
+</ul>
+<p><strong>为什么不只与 AI 聊天？</strong></p>
+<ul>
+<li class="">上下文是短暂的（会话之间丢失）</li>
+<li class="">没有决策的持久记录</li>
+<li class="">无法扩展到团队协作</li>
+<li class="">需要反复重新解释上下文</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="harnspec-解决方案">HarnSpec 解决方案<a href="#harnspec-解决方案" class="hash-link" aria-label="HarnSpec 解决方案的直接链接" title="HarnSpec 解决方案的直接链接" translate="no">​</a></h2>
+<p>HarnSpec 有效是因为它与人类和 AI 的实际工作方式一致：</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="1-尊重基本约束">1. 尊重基本约束<a href="#1-尊重基本约束" class="hash-link" aria-label="1. 尊重基本约束的直接链接" title="1. 尊重基本约束的直接链接" translate="no">​</a></h3>
+<p>基于三个不可变的约束：</p>
+<ul>
+<li class=""><strong>物理</strong>：上下文窗口是有限的（即使有 1M+ Token）</li>
+<li class=""><strong>生物</strong>：工作记忆很小（~7 项，5-10 分钟注意力）</li>
+<li class=""><strong>经济</strong>：时间和Token成本金钱</li>
+</ul>
+<p>→ <strong>上下文经济 (Context Economy)</strong>：Spec必须适合工作记忆（&lt;400 行）</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="2-弥合人类和-ai-的理解">2. 弥合人类和 AI 的理解<a href="#2-弥合人类和-ai-的理解" class="hash-link" aria-label="2. 弥合人类和 AI 的理解的直接链接" title="2. 弥合人类和 AI 的理解的直接链接" translate="no">​</a></h3>
+<p>为两个受众编写Spec：</p>
+<ul>
+<li class=""><strong>对人类</strong>：清晰的问题、理由、权衡（为什么重要）</li>
+<li class=""><strong>对 AI</strong>：结构化需求、示例、成功标准（要构建什么）</li>
+<li class=""><strong>两者都获得</strong>：他们可以解析的自然语言 + 结构化数据</li>
+</ul>
+<p>→ <strong>弥合差距</strong>：使人类意图与机器执行对齐</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="3-作为持久记忆">3. 作为持久记忆<a href="#3-作为持久记忆" class="hash-link" aria-label="3. 作为持久记忆的直接链接" title="3. 作为持久记忆的直接链接" translate="no">​</a></h3>
+<p>Spec作为 AI 代理的语义记忆：</p>
+<ul>
+<li class="">决策和理由跨会话持久化</li>
+<li class="">MCP 服务器实现可靠检索</li>
+<li class="">交叉引用创建知识图谱</li>
+<li class="">更新保持记忆最新</li>
+</ul>
+<p>→ <strong>AI 代理记忆</strong>：超越聊天会话的上下文</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="4-应用上下文工程">4. 应用上下文工程<a href="#4-应用上下文工程" class="hash-link" aria-label="4. 应用上下文工程的直接链接" title="4. 应用上下文工程的直接链接" translate="no">​</a></h3>
+<p>主动管理 AI 工作记忆：</p>
+<ul>
+<li class="">分区（当 &gt;400 行时拆分为子 Spec）</li>
+<li class="">压缩（删除冗余）</li>
+<li class="">压缩（总结已完成的阶段）</li>
+<li class="">隔离（分离不相关的关注点）</li>
+</ul>
+<p>→ <strong>上下文工程</strong>：在上下文失败发生之前预防它们</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="5-拥抱渐进式披露-progressive-disclosure">5. 拥抱渐进式披露 (Progressive Disclosure)<a href="#5-拥抱渐进式披露-progressive-disclosure" class="hash-link" aria-label="5. 拥抱渐进式披露 (Progressive Disclosure)的直接链接" title="5. 拥抱渐进式披露 (Progressive Disclosure)的直接链接" translate="no">​</a></h3>
+<p>从简单开始，仅在感到痛苦时添加结构：</p>
+<ul>
+<li class="">独立开发：仅状态 + 创建日期</li>
+<li class="">小团队：添加标签、优先级</li>
+<li class="">企业：添加受让人、史诗、冲刺</li>
+</ul>
+<p>→ <strong>渐进式披露</strong>：没有过早的抽象</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="何时使用-harnspec">何时使用 HarnSpec<a href="#何时使用-harnspec" class="hash-link" aria-label="何时使用 HarnSpec的直接链接" title="何时使用 HarnSpec的直接链接" translate="no">​</a></h2>
+<p>HarnSpec 是为 <strong>AI 驱动的 Spec 驱动开发 (Spec-Driven Development, SDD)</strong> 设计的。当它有助于 <strong>弥合人类意图到机器执行</strong> 时编写 Spec。当差距已经清楚时跳过它。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="编写spec时">编写Spec时...<a href="#编写spec时" class="hash-link" aria-label="编写Spec时...的直接链接" title="编写Spec时...的直接链接" translate="no">​</a></h3>
+<p><strong>🎯 意图需要澄清：</strong></p>
+<ul>
+<li class="">存在多个有效的解释</li>
+<li class="">权衡或约束不明显</li>
+<li class="">&quot;为什么&quot;与&quot;是什么&quot;一样重要</li>
+<li class="">需要记录决策</li>
+</ul>
+<p><strong>🤖 AI 将实现：</strong></p>
+<ul>
+<li class="">AI 代理需要可执行的上下文</li>
+<li class="">成功标准必须明确</li>
+<li class="">约束无法从代码推断</li>
+<li class="">实现路径需要缩小</li>
+</ul>
+<p><strong>🏗️ 工作很重要：</strong></p>
+<ul>
+<li class="">触及系统的多个部分</li>
+<li class="">架构或结构性变化</li>
+<li class="">破坏性变化或重大重构</li>
+<li class="">跨系统依赖</li>
+</ul>
+<p><strong>📚 需要捕获知识：</strong></p>
+<ul>
+<li class="">研究发现和权衡</li>
+<li class="">技术探索或实验</li>
+<li class="">回顾（什么有效，什么无效）</li>
+<li class="">未来参考的决策</li>
+</ul>
+<p><strong>示例：</strong></p>
+<ul>
+<li class="">使用 AI 实现的新功能</li>
+<li class="">影响多个使用者的 API 设计</li>
+<li class="">架构决策（微服务 vs 单体）</li>
+<li class="">重大重构（不是简单的重命名）</li>
+<li class="">记录发现的研究尖峰</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="跳过spec时">跳过Spec时...<a href="#跳过spec时" class="hash-link" aria-label="跳过Spec时...的直接链接" title="跳过Spec时...的直接链接" translate="no">​</a></h3>
+<p><strong>✂️ 意图不言自明：</strong></p>
+<ul>
+<li class="">明显的错误修复（明确的原因，明确的修复）</li>
+<li class="">琐碎的重构（重命名、提取函数、格式化）</li>
+<li class="">已在代码/注释中有良好记录</li>
+<li class="">变化纯粹是机械的</li>
+</ul>
+<p><strong>🔬 工作是探索性的：</strong></p>
+<ul>
+<li class="">快速原型以发现需求</li>
+<li class="">尝试多种方法</li>
+<li class="">高度不确定性，可能会丢弃</li>
+<li class="">通过实践学习更快</li>
+</ul>
+<p><em>注意：在原型设计后编写Spec以捕获学习</em></p>
+<p><strong>📄 不适合的工具：</strong></p>
+<ul>
+<li class="">API 参考文档（使用自动生成的文档）</li>
+<li class="">用户手册（使用专用工具）</li>
+<li class="">具有特定格式的合规文档（使用所需格式）</li>
+<li class="">依赖更新（标准版本升级）</li>
+</ul>
+<p><strong>示例：</strong></p>
+<ul>
+<li class="">单行错误修复</li>
+<li class="">简单的重命名或代码格式化</li>
+<li class="">标准依赖版本升级</li>
+<li class="">实验性原型（如果有效则在之后记录）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="核心问题">核心问题<a href="#核心问题" class="hash-link" aria-label="核心问题的直接链接" title="核心问题的直接链接" translate="no">​</a></h3>
+<blockquote>
+<p>&quot;Spec会帮助弥合人类意图到机器执行，还是差距已经清楚？&quot;</p>
+</blockquote>
+<p><strong>如果是</strong> → 编写它（保持 &lt;2,000 Token）<br>
+<strong>如果否</strong> → 跳过它或使用代码/注释</p>
+<p>应用<a class="" href="/docs/advanced/first-principles">第一原则</a>来指导判断。</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="harnspec-在实践中的工作方式">HarnSpec 在实践中的工作方式<a href="#harnspec-在实践中的工作方式" class="hash-link" aria-label="HarnSpec 在实践中的工作方式的直接链接" title="HarnSpec 在实践中的工作方式的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="sdd-工作流">SDD 工作流<a href="#sdd-工作流" class="hash-link" aria-label="SDD 工作流的直接链接" title="SDD 工作流的直接链接" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>发现</strong> - 使用 <code>harnspec list</code> 检查现有Spec</li>
+<li class=""><strong>计划</strong> - 在需要时使用 <code>harnspec create &lt;name&gt;</code> 创建Spec</li>
+<li class=""><strong>实现</strong> - 编写代码，随着学习保持Spec同步</li>
+<li class=""><strong>更新</strong> - 使用 <code>harnspec update &lt;spec&gt; --status &lt;status&gt;</code> 标记进度</li>
+<li class=""><strong>完成</strong> - 完成时标记完成，如果完成则归档</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="对于独立开发">对于独立开发<a href="#对于独立开发" class="hash-link" aria-label="对于独立开发的直接链接" title="对于独立开发的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">从最小开始（仅状态 + 创建日期）</li>
+<li class="">随着需求的出现添加结构</li>
+<li class="">对您会忘记的复杂功能使用Spec</li>
+<li class="">让 AI 代理从Spec实现</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="对于团队开发">对于团队开发<a href="#对于团队开发" class="hash-link" aria-label="对于团队开发的直接链接" title="对于团队开发的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Spec提供共同理解</li>
+<li class="">依赖跟踪协调需求</li>
+<li class="">看板视图显示项目健康状况</li>
+<li class="">MCP 实现跨团队的 AI 协作</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="对于-ai-驱动的开发">对于 AI 驱动的开发<a href="#对于-ai-驱动的开发" class="hash-link" aria-label="对于 AI 驱动的开发的直接链接" title="对于 AI 驱动的开发的直接链接" translate="no">​</a></h3>
+<p>Spec具有双重目的：</p>
+<ul>
+<li class=""><strong>人类-AI 桥梁</strong>：将意图转化为可执行的上下文</li>
+<li class=""><strong>AI 记忆</strong>：跨会话持久化决策和理由</li>
+</ul>
+<p><strong>AI 可以帮助编写Spec：</strong></p>
+<ul>
+<li class="">人类提供意图、约束、成功标准</li>
+<li class="">AI 起草结构、示例、格式</li>
+<li class="">人类改进以提高清晰度和精简原则</li>
+</ul>
+<p><strong>三种Spec创建模式：</strong></p>
+<ol>
+<li class=""><strong>人类编写，AI 实现</strong> - 您编写Spec，AI 从中构建</li>
+<li class=""><strong>AI 起草，人类改进</strong> - AI 从您的意图起草Spec，您审查/改进</li>
+<li class=""><strong>共同迭代创建</strong> - 通过对话一起构建Spec</li>
+</ol>
+<p>所有三种模式都是有效的。根据上下文选择。</p>
+<p><strong>AI 辅助的Spec编写决策：</strong></p>
+<p>当 AI 帮助Spec编写时，决策从 <em>&quot;AI 是否需要这个来执行？&quot;</em> 转变为：</p>
+<blockquote>
+<p>** &quot;将意图形式化为Spec是否比继续对话增加价值？&quot; **</p>
+</blockquote>
+<p><strong>编写Spec（在 AI 协助下）时：</strong></p>
+<ul>
+<li class="">✅ 意图需要持久化（决策、参考、入职）</li>
+<li class="">✅ 对话已经澄清了要构建什么（~5+ 轮）</li>
+<li class="">✅ 多个利益相关者需要对齐</li>
+<li class="">✅ 复杂性需要结构（在聊天中会漂移）</li>
+<li class="">✅ 需要合规或审计跟踪</li>
+</ul>
+<p><strong>跳过Spec，继续对话时：</strong></p>
+<ul>
+<li class="">❌ 仍在发现要构建什么（继续探索）</li>
+<li class="">❌ 没有歧义的快速功能（直接实现）</li>
+<li class="">❌ 一次性原型或实验</li>
+<li class="">❌ 代码库中已经清楚的上下文</li>
+</ul>
+<p><strong>检查点模型：</strong> 大多数Spec从对话开始 → 准备好时结晶为Spec → 从Spec实现。Spec成为您工作中的 <strong>形式化检查点</strong>。</p>
+<p><strong>了解更多：</strong> <a class="" href="/docs/advanced/ai-assisted-spec-writing">AI 可执行模式</a>涵盖工作流、模式和最佳实践。</p>
+<p><strong>AI 从Spec实现：</strong></p>
+<ul>
+<li class="">清晰的需求减少幻觉</li>
+<li class="">示例显示预期模式</li>
+<li class="">成功标准定义&quot;完成&quot;</li>
+<li class="">约束防止错误路径</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="底线">底线<a href="#底线" class="hash-link" aria-label="底线的直接链接" title="底线的直接链接" translate="no">​</a></h2>
+<p><strong>HarnSpec 是一种思维方式</strong>，而不是格式。</p>
+<p>它有效是因为它与现实对齐：</p>
+<ul>
+<li class="">上下文窗口是有限的（物理）</li>
+<li class="">工作记忆很小（生物）</li>
+<li class="">时间成本金钱（经济）</li>
+</ul>
+<p>专注于：</p>
+<ul>
+<li class=""><strong>为什么</strong>而不是什么</li>
+<li class=""><strong>清晰度</strong>而不是完整性</li>
+<li class=""><strong>行动</strong>而不是文档</li>
+<li class=""><strong>演变</strong>而不是完美</li>
+</ul>
+<p><strong>成功指标</strong>：如果您的Spec帮助人们（和 AI 代理）更快地构建更好的软件，您就做对了 HarnSpec。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="了解更多">了解更多<a href="#了解更多" class="hash-link" aria-label="了解更多的直接链接" title="了解更多的直接链接" translate="no">​</a></h2>
+<p><strong>核心概念（为什么）：</strong></p>
+<ul>
+<li class=""><a class="" href="/docs/advanced/first-principles">第一原则</a> - 5 个基础原则</li>
+<li class=""><a class="" href="/docs/advanced/context-engineering">上下文工程</a> - 管理 AI 工作记忆</li>
+<li class=""><a class="" href="/docs/advanced/ai-agent-memory">AI 代理记忆</a> - Spec作为持久记忆</li>
+<li class=""><a class="" href="/docs/advanced/philosophy">哲学与思维方式</a> - 心智模型和信念</li>
+</ul>
+<p><strong>入门（如何）：</strong></p>
+<ul>
+<li class=""><a class="" href="/docs/guide/getting-started">快速开始</a> - 安装并创建您的第一个Spec</li>
+<li class=""><a class="" href="/docs/guide/usage/cli/creating-managing">创建和管理Spec</a> - 基本操作</li>
+<li class=""><a class="" href="/docs/advanced/ai-assisted-spec-writing">编写 AI 可执行的Spec</a> - 12 个实用模式</li>
+</ul>
+<p><strong>参考：</strong></p>
+<ul>
+<li class=""><a class="" href="/docs/reference/cli">CLI 参考</a> - 完整的命令文档</li>
+<li class=""><a class="" href="/docs/reference/cli">MCP 服务器</a> - AI 代理集成</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_VfbP"><a href="https://github.com/harnspec/harnspec/tree/main/docs-site/docs/guide/understanding.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_o1VW" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_fHB8"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tableOfContents_JSpw thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#什么是-harnspec" class="table-of-contents__link toc-highlight">什么是 HarnSpec？</a></li><li><a href="#harnspec-解决的问题" class="table-of-contents__link toc-highlight">HarnSpec 解决的问题</a><ul><li><a href="#传统spec失败" class="table-of-contents__link toc-highlight">传统Spec失败</a></li><li><a href="#ai-驱动开发的差距" class="table-of-contents__link toc-highlight">AI 驱动开发的差距</a></li><li><a href="#为什么现有解决方案不足" class="table-of-contents__link toc-highlight">为什么现有解决方案不足</a></li></ul></li><li><a href="#harnspec-解决方案" class="table-of-contents__link toc-highlight">HarnSpec 解决方案</a><ul><li><a href="#1-尊重基本约束" class="table-of-contents__link toc-highlight">1. 尊重基本约束</a></li><li><a href="#2-弥合人类和-ai-的理解" class="table-of-contents__link toc-highlight">2. 弥合人类和 AI 的理解</a></li><li><a href="#3-作为持久记忆" class="table-of-contents__link toc-highlight">3. 作为持久记忆</a></li><li><a href="#4-应用上下文工程" class="table-of-contents__link toc-highlight">4. 应用上下文工程</a></li><li><a href="#5-拥抱渐进式披露-progressive-disclosure" class="table-of-contents__link toc-highlight">5. 拥抱渐进式披露 (Progressive Disclosure)</a></li></ul></li><li><a href="#何时使用-harnspec" class="table-of-contents__link toc-highlight">何时使用 HarnSpec</a><ul><li><a href="#编写spec时" class="table-of-contents__link toc-highlight">编写Spec时...</a></li><li><a href="#跳过spec时" class="table-of-contents__link toc-highlight">跳过Spec时...</a></li><li><a href="#核心问题" class="table-of-contents__link toc-highlight">核心问题</a></li></ul></li><li><a href="#harnspec-在实践中的工作方式" class="table-of-contents__link toc-highlight">HarnSpec 在实践中的工作方式</a><ul><li><a href="#sdd-工作流" class="table-of-contents__link toc-highlight">SDD 工作流</a></li><li><a href="#对于独立开发" class="table-of-contents__link toc-highlight">对于独立开发</a></li><li><a href="#对于团队开发" class="table-of-contents__link toc-highlight">对于团队开发</a></li><li><a href="#对于-ai-驱动的开发" class="table-of-contents__link toc-highlight">对于 AI 驱动的开发</a></li></ul></li><li><a href="#底线" class="table-of-contents__link toc-highlight">底线</a></li><li><a href="#了解更多" class="table-of-contents__link toc-highlight">了解更多</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">文档</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/guide/getting-started">快速开始</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/reference/cli">CLI 参考</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guide/usage/advanced-features/agent-configuration">AI 集成</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/harnspec/harnspec" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">问题反馈<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">讨论区<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/harnspec/harnspec/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">参与贡献<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">更新日志<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.npmjs.com/package/harnspec" target="_blank" rel="noopener noreferrer" class="footer__link-item">npm 包<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">版权所有 © 2026 HarnSpec. 使用 Docusaurus 构建。</div></div></div></footer></div>
+</body>
+</html>

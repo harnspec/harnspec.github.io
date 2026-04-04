@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-guide/limits-and-tradeoffs" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">限制、权衡与现实 | HarnSpec</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://harnspec.github.io/en/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://harnspec.github.io/en/img/social-card.png"><meta data-rh="true" property="og:url" content="https://harnspec.github.io/en/docs/guide/limits-and-tradeoffs"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="限制、权衡与现实 | HarnSpec"><meta data-rh="true" name="description" content="我们应该问的问题"><meta data-rh="true" property="og:description" content="我们应该问的问题"><link data-rh="true" rel="icon" href="/en/favicon.ico"><link data-rh="true" rel="canonical" href="https://harnspec.github.io/en/docs/guide/limits-and-tradeoffs"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/limits-and-tradeoffs" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/en/docs/guide/limits-and-tradeoffs" hreflang="en"><link data-rh="true" rel="alternate" href="https://harnspec.github.io/docs/guide/limits-and-tradeoffs" hreflang="x-default"><link rel="stylesheet" href="/en/assets/css/styles.6f18fabc.css">
+<script src="/en/assets/js/runtime~main.ddb78aec.js" defer="defer"></script>
+<script src="/en/assets/js/main.20101eb4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/en/img/logo-with-bg.svg"><link rel="preload" as="image" href="/en/img/logo-dark-bg.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_qiAP" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="/en/img/logo-with-bg.svg" alt="HarnSpec Logo" class="themedComponent_ixbW themedComponent--light_aP_u"><img src="/en/img/logo-dark-bg.svg" alt="HarnSpec Logo" class="themedComponent_ixbW themedComponent--dark_w3Ne"></div><b class="navbar__title text--truncate">HarnSpec</b></a><a class="navbar__item navbar__link" href="/en/docs/guide/">Guide</a><a class="navbar__item navbar__link" href="/en/docs/reference/cli">Reference</a><a href="https://harnspec.github.io/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Web App<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_bXcV"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/docs/guide/limits-and-tradeoffs" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-Hans">简体中文</a></li><li><a href="/en/docs/guide/limits-and-tradeoffs" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><a href="https://github.com/harnspec/harnspec" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_aZw2 colorModeToggle_riY9"><button class="clean-btn toggleButton_ilLi toggleButtonDisabled_yyPz" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI lightToggleIcon_uCwf"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI darkToggleIcon_MHYg"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_J9qI systemToggleIcon_PQ0a"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_zOLK"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_mFoK"><div class="docsWrapper_i8Gt"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_X4Pl" type="button"></button><div class="docRoot_iKl8"><main class="docMainContainer_vSnV docMainContainerEnhanced_lSJs"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_BUnp"><div class="docItemContainer_vxDl"><article><div class="tocCollapsible_iK11 theme-doc-toc-mobile tocMobile_czu2"><button type="button" class="clean-btn tocCollapsibleButton_rCZN">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>限制、权衡与现实</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="我们应该问的问题">我们应该问的问题<a href="#我们应该问的问题" class="hash-link" aria-label="Direct link to 我们应该问的问题" title="Direct link to 我们应该问的问题" translate="no">​</a></h2>
+<p><a href="https://hyperdev.matsuoka.com/p/is-ai-a-bubble-i-didnt-think-so-until" target="_blank" rel="noopener noreferrer" class="">Robert Matsuoka 的批判性分析</a>认为，Spec驱动开发 (Spec-Driven Development, SDD)（SDD）具有双重目的：解决实际问题，但也提供&quot;证明企业采购合理性并使估值脱节的治理叙事&quot;。</p>
+<p>公平的问题。让我们诚实地解决它。</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="批评是有效的">批评是有效的<a href="#批评是有效的" class="hash-link" aria-label="Direct link to 批评是有效的" title="Direct link to 批评是有效的" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="1-tdd-并行警告">1. TDD 并行警告<a href="#1-tdd-并行警告" class="hash-link" aria-label="Direct link to 1. TDD 并行警告" title="Direct link to 1. TDD 并行警告" translate="no">​</a></h3>
+<p><strong>关注点：</strong> 测试驱动开发尽管已被证明有益，但在 20 年后的采用率仍 &lt;20%。由于时间压力、cargo cult 实践和采用障碍而失败。</p>
+<p><strong>SDD 的类似风险：</strong> 该方法论要求在实现之前有完整的Spec——这正是软件已经挣扎了 50 年的事情。</p>
+<p><strong>我们的回应：</strong> HarnSpec 明确拒绝&quot;预先完整Spec&quot;。我们的 <strong>上下文经济 (Context Economy)</strong> 原则（少于 2,000 Token）和 <strong>意图优于实现 (Intent Over Implementation)</strong> 方法专注于捕获为什么/什么，而不是详尽的如何。我们不是要求瀑布需求——我们是要求足够的意图来协调人类和 AI。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="2-70-自动化神话">2. 70% 自动化神话<a href="#2-70-自动化神话" class="hash-link" aria-label="Direct link to 2. 70% 自动化神话" title="Direct link to 2. 70% 自动化神话" translate="no">​</a></h3>
+<p><strong>关注点：</strong> 真实世界的 METR 研究发现，开发人员使用 AI 实际上 <strong>花费了 19% 更长时间</strong>，尽管他们相信自己快了 20%。&quot;70% 自动化&quot;的声明被夸大了——它只是总开发工作的 27%（39% 编码时间 × 70% 自动化）。</p>
+<p><strong>我们的回应：</strong> <strong>我们不承诺自动化百分比。</strong> HarnSpec 是关于对齐和意图文档，而不是自动化声明。现实结果：通过更好的人机协作实现 10-30% 的生产力提高，而不是消除人类工作。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="3-ai-代理仍然会犯错">3. AI 代理仍然会犯错<a href="#3-ai-代理仍然会犯错" class="hash-link" aria-label="Direct link to 3. AI 代理仍然会犯错" title="Direct link to 3. AI 代理仍然会犯错" translate="no">​</a></h3>
+<p><strong>关注点：</strong> Martin Fowler 的实验表明，尽管有详细的Spec，AI 代理仍然会生成未请求的功能，中途改变假设，并在构建失败时声称成功。</p>
+<p><strong>Fowler 的引用：</strong> <em>&quot;由于这项技术的非确定性本质，它做我们不想要的事情的概率总是会非常高。&quot;</em></p>
+<p><strong>我们的回应：</strong> <strong>我们同意。</strong> Spec不能消除 AI 的不可预测性——它们减少了它。目标不是自主编码；而是人类审查的更明智的 AI 建议。Spec提供的上下文使 AI 输出更符合意图。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="4-sdd-可能是过渡性的">4. SDD 可能是过渡性的<a href="#4-sdd-可能是过渡性的" class="hash-link" aria-label="Direct link to 4. SDD 可能是过渡性的" title="Direct link to 4. SDD 可能是过渡性的" translate="no">​</a></h3>
+<p><strong>关注点：</strong> &quot;如果模型变得足够确定和上下文感知，Spec就成为不必要的开销。&quot;</p>
+<p><strong>我们的回应：</strong> <strong>可能是真的。</strong> 如果 AI 变得足够好，您可能需要更少的结构。但即使那样：</p>
+<ul>
+<li class="">人与人之间的对齐仍然需要文档</li>
+<li class="">捕获意图（而不仅仅是实现）的Spec更持久</li>
+<li class="">**渐进式披露 (Progressive Disclosure)**意味着随着 AI 的改进，您可以使用更少的结构，而不是放弃方法论</li>
+</ul>
+<p>我们今天有用是因为 AI 不可预测。如果 AI 显著改进，相应地调整。</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="spec是表演的地方">Spec是表演的地方<a href="#spec是表演的地方" class="hash-link" aria-label="Direct link to Spec是表演的地方" title="Direct link to Spec是表演的地方" translate="no">​</a></h2>
+<p>让我们具体说明Spec何时成为治理表演而不是生产力工具：</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-表演spec作为复选框练习">❌ 表演：Spec作为复选框练习<a href="#-表演spec作为复选框练习" class="hash-link" aria-label="Direct link to ❌ 表演：Spec作为复选框练习" title="Direct link to ❌ 表演：Spec作为复选框练习" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>症状：</strong> 编写Spec以证明预算合理，但不衡量结果</li>
+<li class=""><strong>示例：</strong> 企业要求Spec用于采购，但批准后没有人阅读它们</li>
+<li class=""><strong>结果：</strong> 浪费精力，没有对齐好处</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-表演完整的预先需求">❌ 表演：完整的预先需求<a href="#-表演完整的预先需求" class="hash-link" aria-label="Direct link to ❌ 表演：完整的预先需求" title="Direct link to ❌ 表演：完整的预先需求" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>症状：</strong> 在任何编码之前要求详尽的Spec（瀑布陷阱）</li>
+<li class=""><strong>示例：</strong> 试图在发现之前指定每个边缘情况的 2,000 行 PRD</li>
+<li class=""><strong>结果：</strong> 上下文溢出，陈旧的文档，AI 无法帮助</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-表演ai-无论如何都会忽略的spec">❌ 表演：AI 无论如何都会忽略的Spec<a href="#-表演ai-无论如何都会忽略的spec" class="hash-link" aria-label="Direct link to ❌ 表演：AI 无论如何都会忽略的Spec" title="Direct link to ❌ 表演：AI 无论如何都会忽略的Spec" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>症状：</strong> 编写 AI 不读或无法适应上下文窗口的Spec</li>
+<li class=""><strong>示例：</strong> 超过Token限制的冗长文档</li>
+<li class=""><strong>结果：</strong> 人力浪费，AI 在没有Spec上下文的情况下生成代码</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-表演僵化的流程胜过实用主义">❌ 表演：僵化的流程胜过实用主义<a href="#-表演僵化的流程胜过实用主义" class="hash-link" aria-label="Direct link to ❌ 表演：僵化的流程胜过实用主义" title="Direct link to ❌ 表演：僵化的流程胜过实用主义" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>症状：</strong> 无论变更大小如何都需要多步骤工作流程</li>
+<li class=""><strong>示例：</strong> 错误修复需要Spec → 计划 → 任务 → 批准 → 实现</li>
+<li class=""><strong>结果：</strong> 流程开销扼杀速度</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="spec增加价值的地方">Spec增加价值的地方<a href="#spec增加价值的地方" class="hash-link" aria-label="Direct link to Spec增加价值的地方" title="Direct link to Spec增加价值的地方" translate="no">​</a></h2>
+<p>当Spec真正改善结果时，而不仅仅是勾选合规框：</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-价值复杂功能的团队对齐">✅ 价值：复杂功能的团队对齐<a href="#-价值复杂功能的团队对齐" class="hash-link" aria-label="Direct link to ✅ 价值：复杂功能的团队对齐" title="Direct link to ✅ 价值：复杂功能的团队对齐" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>场景：</strong> 多个开发人员需要协调理解</li>
+<li class=""><strong>好处：</strong> 共享的真实来源防止不同的实现</li>
+<li class=""><strong>结果：</strong> 更少的返工，更快的进展</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-价值意图保留">✅ 价值：意图保留<a href="#-价值意图保留" class="hash-link" aria-label="Direct link to ✅ 价值：意图保留" title="Direct link to ✅ 价值：意图保留" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>场景：</strong> 决策需要文档以供将来参考</li>
+<li class=""><strong>好处：</strong> 捕获&quot;为什么&quot;，而不仅仅是&quot;如何&quot;</li>
+<li class=""><strong>结果：</strong> 未来的更改尊重原始约束和权衡</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-价值ai-上下文不会溢出">✅ 价值：AI 上下文不会溢出<a href="#-价值ai-上下文不会溢出" class="hash-link" aria-label="Direct link to ✅ 价值：AI 上下文不会溢出" title="Direct link to ✅ 价值：AI 上下文不会溢出" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>场景：</strong> 功能对于纯 vibe 编码来说太复杂</li>
+<li class=""><strong>好处：</strong> 少于 2,000 Token的Spec适合 AI 上下文窗口</li>
+<li class=""><strong>结果：</strong> AI 实际读取并将Spec纳入建议</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="-价值渐进式完善">✅ 价值：渐进式完善<a href="#-价值渐进式完善" class="hash-link" aria-label="Direct link to ✅ 价值：渐进式完善" title="Direct link to ✅ 价值：渐进式完善" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>场景：</strong> 需求通过实现出现（Spec驱动开发风格）</li>
+<li class=""><strong>好处：</strong> Spec随着学习而演变，保持对齐</li>
+<li class=""><strong>结果：</strong> 保持相关的活文档</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="理论基础rice-定理">理论基础：Rice 定理<a href="#理论基础rice-定理" class="hash-link" aria-label="Direct link to 理论基础：Rice 定理" title="Direct link to 理论基础：Rice 定理" translate="no">​</a></h2>
+<p>人类参与必要的更深层原因来自计算机科学基础。</p>
+<p><strong><a href="https://www.marvinzhang.dev/blog/rices-theorem-why-automated-testing-will-fail" target="_blank" rel="noopener noreferrer" class="">Rice 定理</a></strong>（1951）证明所有程序的非平凡语义属性都是 <strong>不可判定的</strong>——没有算法可以确定任意程序是否具有任何有趣的行为特征。</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="这对-sdd-意味着什么">这对 SDD 意味着什么<a href="#这对-sdd-意味着什么" class="hash-link" aria-label="Direct link to 这对 SDD 意味着什么" title="Direct link to 这对 SDD 意味着什么" translate="no">​</a></h3>
+<p><strong>不可判定的问题：</strong> &quot;这个程序做用户想要的事情吗？&quot;（需要理解未定义的意图）</p>
+<p><strong>可处理的问题：</strong> &quot;这个程序满足这些明确的Spec吗？&quot;（检查定义的需求）</p>
+<p><strong>关键见解：</strong> Spec不能&quot;解决&quot;不可判定性——它们提供使验证可处理的语义基础。<strong>人类定义&quot;正确&quot;的含义；AI 在这些约束内生成实现和测试。</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="为什么-ai-不能取代人类spec">为什么 AI 不能取代人类Spec<a href="#为什么-ai-不能取代人类spec" class="hash-link" aria-label="Direct link to 为什么 AI 不能取代人类Spec" title="Direct link to 为什么 AI 不能取代人类Spec" translate="no">​</a></h3>
+<p>Rice 定理解释了原因：</p>
+<ol>
+<li class=""><strong>语义属性不可判定</strong> - AI 无法算法地确定您想要什么</li>
+<li class=""><strong>Spec提供基础</strong> - 人类将意图转换为可检查的断言</li>
+<li class=""><strong>AI 放大，不取代</strong> - AI 从人类提供的Spec生成代码/测试</li>
+<li class=""><strong>测试是采样，而不是证明</strong> - 即使有Spec，我们也通过启发式测试建立信心，而不是数学确定性</li>
+</ol>
+<p><strong>来自 Rice 定理文章：</strong></p>
+<blockquote>
+<p><em>&quot;理解完全测试自动化在数学上是不可能的并不会让我们无助——它指导我们走向更有效的策略。关键见解是，我们可以通过将正式Spec与 AI 驱动的测试生成相结合，显著提高测试有效性。&quot;</em></p>
+</blockquote>
+<p><strong>这正是 HarnSpec 的哲学：</strong> 人类提供意图（Spec），AI 放大规模（实现），两者都在理论约束内工作。</p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="harnspec-与批评的不同之处">HarnSpec 与批评的不同之处<a href="#harnspec-与批评的不同之处" class="hash-link" aria-label="Direct link to HarnSpec 与批评的不同之处" title="Direct link to HarnSpec 与批评的不同之处" translate="no">​</a></h2>
+<p>Hyperdev 文章批评像 Tessl（1.25 亿美元，只交付了测试版注册表）和僵化方法论这样的 SDD 框架。以下是 HarnSpec 的不同定位：</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="我们不是">我们不是：<a href="#我们不是" class="hash-link" aria-label="Direct link to 我们不是：" title="Direct link to 我们不是：" translate="no">​</a></h3>
+<ul>
+<li class="">❌ 承诺 70% 自动化或自主编码</li>
+<li class="">❌ 出售 1.25 亿美元的平台或 100 亿美元的 IDE</li>
+<li class="">❌ 在任何代码之前要求僵化的 5 步工作流程</li>
+<li class="">❌ 声称Spec消除 AI 不可预测性</li>
+<li class="">❌ 要求完整的预先Spec</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="我们是">我们是：<a href="#我们是" class="hash-link" aria-label="Direct link to 我们是：" title="Direct link to 我们是：" translate="no">​</a></h3>
+<ul>
+<li class="">✅ 免费、开源工具（没有风险投资，没有估值炒作）</li>
+<li class="">✅ 对Spec何时有帮助与何时有害持务实态度（明确的&quot;何时不使用Spec&quot;指导）</li>
+<li class="">✅ 工具不可知（适用于任何编辑器、任何 AI 助手）</li>
+<li class="">✅ 解决真正的痛点：团队对齐、上下文腐烂、决策文档</li>
+<li class="">✅ 从最小开始，仅在感到痛苦时添加结构（<strong>渐进式披露</strong>）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="定位差异">定位差异<a href="#定位差异" class="hash-link" aria-label="Direct link to 定位差异" title="Direct link to 定位差异" translate="no">​</a></h3>
+<p><strong>来自文章：</strong> <em>&quot;SDD 充当质量控制表演...但该方法论还提供证明企业采购合理性并使估值脱节的治理叙事——它既是解决方案又是症状。&quot;</em></p>
+<p><strong>HarnSpec 的立场：</strong> 我们是&quot;解决方案&quot;部分，没有&quot;症状&quot;部分：</p>
+<ul>
+<li class="">Spec增强判断力，它们不取代对代码库的理解</li>
+<li class="">随团队成长的结构（单人 → 企业）</li>
+<li class="">没有革新软件创建的承诺——只是务实的文档</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="在修正中幸存">在修正中幸存<a href="#在修正中幸存" class="hash-link" aria-label="Direct link to 在修正中幸存" title="Direct link to 在修正中幸存" translate="no">​</a></h2>
+<p>Hyperdev 文章预测 AI 泡沫将在 18-24 个月内修正。以下是 HarnSpec 定位不同的原因：</p>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="幸存者共享这些特征">幸存者共享这些特征<a href="#幸存者共享这些特征" class="hash-link" aria-label="Direct link to 幸存者共享这些特征" title="Direct link to 幸存者共享这些特征" translate="no">​</a></h3>
+<p>根据文章，幸存者将是&quot;增强而不是取代核心能力&quot;的工具。</p>
+<p><strong>那就是我们：</strong></p>
+<ul>
+<li class="">Spec不取代编码判断——它们增强人机对齐</li>
+<li class="">没有自主编码声明——只是更明智的建议</li>
+<li class="">免费工具，没有需要证明的估值</li>
+<li class="">在理论约束（Rice 定理）内工作，而不是违背它们</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_qTje" id="在修正中杀死公司的是什么">在修正中杀死公司的是什么<a href="#在修正中杀死公司的是什么" class="hash-link" aria-label="Direct link to 在修正中杀死公司的是什么" title="Direct link to 在修正中杀死公司的是什么" translate="no">​</a></h3>
+<ul>
+<li class="">在&quot;技术潜力&quot;而不是付费客户上烧钱</li>
+<li class="">承诺超出理论可能的自动化</li>
+<li class="">不适应现实的僵化流程</li>
+<li class="">与实际效用脱节的估值</li>
+</ul>
+<p><strong>HarnSpec 避免这些：</strong></p>
+<ul>
+<li class="">开源，没有资本燃烧</li>
+<li class="">对限制诚实（没有 70% 自动化承诺）</li>
+<li class="">渐进式披露（适应团队需求）</li>
+<li class="">免费使用，价值以生产力而非估值衡量</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="诚实的评估">诚实的评估<a href="#诚实的评估" class="hash-link" aria-label="Direct link to 诚实的评估" title="Direct link to 诚实的评估" translate="no">​</a></h2>
+<p><strong>Spec可以是表演。</strong> 当它们：</p>
+<ul>
+<li class="">采购需要但没有人阅读它们</li>
+<li class="">超出上下文限制的详尽预先需求</li>
+<li class="">应用于琐碎变更的僵化流程</li>
+<li class="">代码演变时保持静态的文档</li>
+</ul>
+<p><strong>Spec增加价值时：</strong></p>
+<ul>
+<li class="">团队需要在复杂功能上对齐</li>
+<li class="">意图必须持续超越对话</li>
+<li class="">决策需要文档以供未来参考</li>
+<li class="">Spec适合 AI 上下文窗口并实际告知实现</li>
+<li class="">结构逐步适应团队需求</li>
+</ul>
+<p><strong>HarnSpec 的哲学：</strong></p>
+<ul>
+<li class="">对限制诚实（Rice 定理证明完全自动化是不可能的）</li>
+<li class="">从简单开始，仅在感到痛苦时添加复杂性（渐进式披露）</li>
+<li class="">保持Spec足够短以实际使用（&lt;2,000 Token，上下文经济）</li>
+<li class="">专注于持久的意图（意图优于实现）</li>
+<li class="">利用 AI 的优势，承认其弱点</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="您应该问的问题">您应该问的问题<a href="#您应该问的问题" class="hash-link" aria-label="Direct link to 您应该问的问题" title="Direct link to 您应该问的问题" translate="no">​</a></h2>
+<p>不是：<em>&quot;我应该使用 SDD 吗？&quot;</em></p>
+<p>而是：<em>&quot;将意图形式化为Spec是否为这项特定工作增加价值？&quot;</em></p>
+<p><strong>当满足以下条件时回答是：</strong></p>
+<ul>
+<li class="">功能足够复杂，vibe 编码导致错位</li>
+<li class="">团队需要共同理解</li>
+<li class="">AI 需要结构化上下文才能有效帮助</li>
+<li class="">决策应该为未来的维护者记录</li>
+</ul>
+<p><strong>当满足以下条件时回答否：</strong></p>
+<ul>
+<li class="">变更琐碎且明显</li>
+<li class="">您仍在探索和发现需求</li>
+<li class="">开销超过好处</li>
+<li class="">不会维护的原型</li>
+</ul>
+<p><strong>HarnSpec 为您提供在重要时有效说是的工具。</strong></p>
+<h2 class="anchor anchorTargetStickyNavbar_qTje" id="进一步阅读">进一步阅读<a href="#进一步阅读" class="hash-link" aria-label="Direct link to 进一步阅读" title="Direct link to 进一步阅读" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://hyperdev.matsuoka.com/p/is-ai-a-bubble-i-didnt-think-so-until" target="_blank" rel="noopener noreferrer" class="">AI 泡沫文章</a> - 引发此评估的批评</li>
+<li class=""><a href="https://www.marvinzhang.dev/blog/rices-theorem-why-automated-testing-will-fail" target="_blank" rel="noopener noreferrer" class="">Rice 定理解释</a> - 为什么人类参与在数学上是必要的</li>
+<li class=""><a class="" href="/en/docs/advanced/first-principles">HarnSpec 第一原则</a> - 从约束中衍生的哲学</li>
+<li class=""><a class="" href="/en/docs/advanced/ai-assisted-spec-writing#when-not-to-use-specs">何时不使用Spec</a> - 关于跳过Spec的诚实指导</li>
+</ul>
+<hr>
+<p><strong>底线：</strong> 我们不是在卖革命。我们为一个真正的问题提供务实的工具——通过轻量级、可维护的Spec保持人类和 AI 对齐。如果这是表演，那是真正改善表演的那种。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_VfbP"><a href="https://github.com/harnspec/harnspec/tree/main/docs-site/docs/guide/limits-and-tradeoffs.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_o1VW" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_fHB8"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_JSpw thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#我们应该问的问题" class="table-of-contents__link toc-highlight">我们应该问的问题</a></li><li><a href="#批评是有效的" class="table-of-contents__link toc-highlight">批评是有效的</a><ul><li><a href="#1-tdd-并行警告" class="table-of-contents__link toc-highlight">1. TDD 并行警告</a></li><li><a href="#2-70-自动化神话" class="table-of-contents__link toc-highlight">2. 70% 自动化神话</a></li><li><a href="#3-ai-代理仍然会犯错" class="table-of-contents__link toc-highlight">3. AI 代理仍然会犯错</a></li><li><a href="#4-sdd-可能是过渡性的" class="table-of-contents__link toc-highlight">4. SDD 可能是过渡性的</a></li></ul></li><li><a href="#spec是表演的地方" class="table-of-contents__link toc-highlight">Spec是表演的地方</a><ul><li><a href="#-表演spec作为复选框练习" class="table-of-contents__link toc-highlight">❌ 表演：Spec作为复选框练习</a></li><li><a href="#-表演完整的预先需求" class="table-of-contents__link toc-highlight">❌ 表演：完整的预先需求</a></li><li><a href="#-表演ai-无论如何都会忽略的spec" class="table-of-contents__link toc-highlight">❌ 表演：AI 无论如何都会忽略的Spec</a></li><li><a href="#-表演僵化的流程胜过实用主义" class="table-of-contents__link toc-highlight">❌ 表演：僵化的流程胜过实用主义</a></li></ul></li><li><a href="#spec增加价值的地方" class="table-of-contents__link toc-highlight">Spec增加价值的地方</a><ul><li><a href="#-价值复杂功能的团队对齐" class="table-of-contents__link toc-highlight">✅ 价值：复杂功能的团队对齐</a></li><li><a href="#-价值意图保留" class="table-of-contents__link toc-highlight">✅ 价值：意图保留</a></li><li><a href="#-价值ai-上下文不会溢出" class="table-of-contents__link toc-highlight">✅ 价值：AI 上下文不会溢出</a></li><li><a href="#-价值渐进式完善" class="table-of-contents__link toc-highlight">✅ 价值：渐进式完善</a></li></ul></li><li><a href="#理论基础rice-定理" class="table-of-contents__link toc-highlight">理论基础：Rice 定理</a><ul><li><a href="#这对-sdd-意味着什么" class="table-of-contents__link toc-highlight">这对 SDD 意味着什么</a></li><li><a href="#为什么-ai-不能取代人类spec" class="table-of-contents__link toc-highlight">为什么 AI 不能取代人类Spec</a></li></ul></li><li><a href="#harnspec-与批评的不同之处" class="table-of-contents__link toc-highlight">HarnSpec 与批评的不同之处</a><ul><li><a href="#我们不是" class="table-of-contents__link toc-highlight">我们不是：</a></li><li><a href="#我们是" class="table-of-contents__link toc-highlight">我们是：</a></li><li><a href="#定位差异" class="table-of-contents__link toc-highlight">定位差异</a></li></ul></li><li><a href="#在修正中幸存" class="table-of-contents__link toc-highlight">在修正中幸存</a><ul><li><a href="#幸存者共享这些特征" class="table-of-contents__link toc-highlight">幸存者共享这些特征</a></li><li><a href="#在修正中杀死公司的是什么" class="table-of-contents__link toc-highlight">在修正中杀死公司的是什么</a></li></ul></li><li><a href="#诚实的评估" class="table-of-contents__link toc-highlight">诚实的评估</a></li><li><a href="#您应该问的问题" class="table-of-contents__link toc-highlight">您应该问的问题</a></li><li><a href="#进一步阅读" class="table-of-contents__link toc-highlight">进一步阅读</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">文档</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/en/docs/guide/getting-started">快速开始</a></li><li class="footer__item"><a class="footer__link-item" href="/en/docs/reference/cli">CLI 参考</a></li><li class="footer__item"><a class="footer__link-item" href="/en/docs/guide/usage/advanced-features/agent-configuration">AI 集成</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/harnspec/harnspec" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">问题反馈<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">讨论区<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/harnspec/harnspec/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">参与贡献<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/harnspec/harnspec/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">更新日志<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.npmjs.com/package/harnspec" target="_blank" rel="noopener noreferrer" class="footer__link-item">npm 包<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink__nQ1"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 codervisor. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
